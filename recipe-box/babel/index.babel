@@ -1,0 +1,242 @@
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      recipes: [],
+    };
+    this._editMode = -1;
+    this.loadLocal = true;
+    this.addButton = this.addButton.bind(this);
+    this.deleteRecipe = this.deleteRecipe.bind(this);
+    this.saveRecipe = this.saveRecipe.bind(this);
+    this.editRecipe = this.editRecipe.bind(this);
+  };
+  
+  componentDidMount(){
+    if (this.loadLocal){
+      let placeOlder = [{title:"Recipe 1", ingredients:"item 1, item 2, item 3"},{title:"Recipe 2", ingredients:"item 1, item 2"},{title:"Recipe 3", ingredients:"item 1, item 2, item 3, item 4"}];
+    
+      let itemsArray = localStorage.getItem('_BuccaneerDev_recipes') ? JSON.parse(localStorage.getItem('_BuccaneerDev_recipes')) : placeOlder;
+      this.setState({recipes: itemsArray});
+      this.loadLocal = false;
+    }
+  }
+  
+  addButton(e){
+    this._editMode=-1;
+    $("#title").val('');
+    $("#ingredients").val('');
+    $(".modal-title").text("Add New Recipe");
+    $("#myModal").modal('show');
+  }
+  
+  deleteRecipe(e){
+    let target = e.currentTarget || e.srcElement;
+    let id = target.id;
+    const newRecipes = [...this.state.recipes]
+    let appo = [...newRecipes.slice(0,id), ...newRecipes.slice(parseInt(id)+1)];
+    
+    localStorage.setItem('_BuccaneerDev_recipes', JSON.stringify(appo));
+    this.setState({recipes: appo});
+  }
+  
+  saveRecipe(e){
+    e.preventDefault();
+    var newRecipe = {};
+    newRecipe.title = $("#title").val();
+    newRecipe.ingredients = $("#ingredients").val();
+    $("#myModal").modal('hide');
+    let appo = [];
+    if (this._editMode!=-1){
+      const newRecipes = [...this.state.recipes]
+      
+      appo = [...newRecipes.slice(0,this._editMode), ...newRecipes.slice(this._editMode+1), newRecipe ];
+      this._editMode=-1;
+    } else {
+      appo = [...this.state.recipes, newRecipe];
+    }
+    
+    localStorage.setItem('_BuccaneerDev_recipes', JSON.stringify(appo));
+    this.setState({recipes: appo});
+  }
+  
+  editRecipe(e){
+    let target = e.currentTarget || e.srcElement;
+    let id = target.id;
+    console.log(id);
+    this._editMode = parseInt(id);
+    var modRecipe = this.state.recipes[id];
+    $("#title").val(modRecipe.title);
+    $("#ingredients").val(modRecipe.ingredients);
+    $(".modal-title").text("Edit Recipe");
+    $("#myModal").modal('show');
+  }
+  
+  render() {
+    const recipes = this.state.recipes;
+    return (
+      <div className="container text-center">
+        <h1>Recipe Box</h1>
+        <p> work in progres </p>
+        <Accordion
+          data = {recipes}
+          delFunc = {this.deleteRecipe}
+          modFunc = {this.editRecipe}
+        >
+        </Accordion>
+        <ModalAdd 
+          title="Add New Recipe"
+          onClick={this.saveRecipe}
+          addButton={this.addButton}>
+        </ModalAdd>
+      </div>
+      
+    );
+  }
+}
+
+class ItemTable extends React.Component {
+  render () {
+    var items = this.props.items.split(',');
+    var i = 0;
+    return (
+      <table className="table table-bordered">
+        <tbody>
+          { items.map(item => {
+            return (
+              <tr key={i++}>
+                <td>{item}</td>
+              </tr>
+            );
+          })}
+        </tbody>
+      </table>
+    );
+  }
+}
+  
+class Accordion extends React.Component {
+  render () {
+    var data = this.props.data;
+    var delFunc = this.props.delFunc;
+    var modFunc = this.props.modFunc;
+    var count = 0;
+    return (
+      <div className="panel-group accordion" id="accordion">
+        {data.map(item => {
+         return (
+           <Section 
+            key={count}
+            title={item.title}
+            secId={"collapse"+count++}
+            items = {item.ingredients}
+            delFunc={delFunc}
+            modFunc={modFunc}
+           > 
+           </Section>
+          );
+        })}
+      </div>
+    );
+  }
+}
+
+class Section extends React.Component {
+  
+  render () {
+    const{ 
+      secId,
+      items,
+      delFunc,
+      modFunc,
+    } = this.props;
+    return (
+      <div className="panel panel-info text-left">
+        <div className="panel-heading">
+          <div className="panel-title" data-toggle="collapse" data-target={"#"+secId} data-parent="#accordion" >
+            {this.props.title}
+          </div>
+          <span> 
+            <Button 
+              onClick={delFunc}
+              className="button-inline"
+              secId={secId.replace('collapse','')}
+            > 
+              <i className="fa fa-trash" aria-hidden="true"> Delete</i>
+            </Button>
+        </span> &nbsp;&nbsp;&nbsp;&nbsp;
+        <span> 
+            <Button 
+              onClick={modFunc}
+              className="button-inline"
+              secId={secId.replace('collapse','')}
+            >
+              <i className="fa fa-pencil" aria-hidden="true"> Edit</i>
+            </Button>
+        </span>
+        </div> 
+        <div id={secId} className="panel-collapse collapse">
+          <div className="panel-body">
+            <ItemTable
+              items={items}
+            >
+            </ItemTable>
+          </div>
+        </div>  
+      </div>  
+    );
+  }
+}
+
+const ModalAdd = ({title, onClick, addButton}) =>
+  <div className="container">
+      <button type="button" className="btn btn-info btn-lg" onClick={addButton}>Add Recipe</button>
+  <div className="modal fade" id="myModal" role="dialog">
+    <div className="modal-dialog">
+      <div className="modal-content">
+        <div className="modal-header">
+          <button type="button" className="close" data-dismiss="modal">&times;</button>
+          <h4 className="modal-title">{title}</h4>
+        </div>
+        <div className="modal-body">
+          <RecipeForm />
+        </div>
+        <div className="modal-footer">
+          <button type="button" onClick={onClick} className="btn btn-info">Save</button>
+          <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+const Button = ({onClick, className, secId, children}) =>
+      <button
+        onClick={onClick}
+        className={className}
+        type="button"
+        id = {secId}
+      >
+        {children}
+</button>
+
+const RecipeForm = () =>
+  <form className="form-horizontal">
+  <div className="form-group">
+    <label className="control-label col-sm-3">Recipe name:</label>
+    <div className="col-sm-9">
+    <input type="text" className="form-control" placeholder="Name" id="title" />
+    </div>
+  </div>
+  <div className="form-group">
+    <label className="control-label col-sm-3">Ingredients:</label>
+    <div className="col-sm-9">
+    <textarea rows="4" className="form-control" placeholder="Ingredients, Commas, Separated" id="ingredients"/>
+    </div>
+  </div>
+  </form>
+
+const appDiv = document.getElementById('app');
+ReactDOM.render(<App />, appDiv);

@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html>  
+<head>    
+	<meta charset="utf-8">    
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">    
+	<meta name="viewport" content="width=device-width, initial-scale=1">    
+	<title>Wikipedia Viewer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/wiki.css">
+    <!--[if lt IE 9]>      
+    	<script  src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js">      
+    	</script>
+    <![endif]-->  
+</head>  
+<body>
+	<header>  
+	  <div class="container">    
+	    <div class="row">      
+	      <a class="brand pull-left" href="https://ventrosky.github.io/portfolio/index.html" target="_blank"><img src="https://raw.githubusercontent.com/Ventrosky/web-projects/master/freeCodeCamp/img/buccdev-xs.png" alt="logo"> &nbsp Buccaneer &lt;dev&gt;</a>      
+        <a class="pull-right" href="https://github.com/Ventrosky/" target="_blank"><i class="fa fa-github"></i> GitHub</a>       
+	    </div>  
+	  </div> 
+	</header>
+	<section id="intro-header">  
+	  <div class="container">    
+	    <div class="row text-center">         
+	        <h1 id="title">Wikipedia Viewer</h1>
+      </div> 
+      <div calss="row">  
+       <div class="input-group col-md-6 col-centered" >  
+         <span class="input-group-btn">    
+           <button class="btn btn-primary" type="button" id="find-article"><i class="fa fa-search"></i> Search</button>  
+         </span>  
+         <input type="text" class="form-control" placeholder="Custom Topic" id="custom-topic"> 
+         <span class="input-group-btn">    
+           <button class="btn btn-primary" type="button" id="rnd-article"><i class="fa fa-random" ></i> Random</button>  
+         </span>  
+        </div> 
+      </div>
+        
+	  </div> 
+	</section> 
+	<section id="search-results">  
+		<div class="container  col-md-6 col-centered" id="wiki-pages"> 
+    		<ul class="list-unstyled text-center" id="wiki-list">
+    		   
+    		</ul>
+  		</div>
+	</section>
+    <script src="js/jquery.min.js"></script>    
+    <script src="js/bootstrap.min.js"></script>  
+    <script src="js/wiki.js">
+</script>   
+</body> 
+</html>

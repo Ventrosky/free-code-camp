@@ -1,0 +1,29 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+header {  
+  background-color: #F8F8F8; 
+}
+header a{  
+  padding: 1rem 0;  
+  color: black;  
+  font-weight: bold; 
+} 
+header a:hover{
+ color: #be5532;
+ text-decoration: none;
+}
+#temp{
+  font-size: 1.8rem;
+  padding-top: 4px;
+}
+#temp:hover{
+ color: #be5532;
+ text-decoration: none;
+ cursor: pointer;
+}
+#desc {
+    padding-top: 10px;
+    font-size: 1.9rem;
+}

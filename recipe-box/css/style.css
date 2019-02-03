@@ -1,0 +1,24 @@
+.button-inline {
+  border-width: 0;
+  background: transparent;
+  color: inherit;
+  text-align: inherit;
+  -webkit-font-smoothing: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  float: right;
+  margin-right: 10px;
+}
+
+.panel-title {
+  display: inline;
+  cursor: pointer;
+}
+
+.panel-title:hover {
+  color: #46b8da;
+}
+
+button:hover {
+  color: #46b8da;
+}

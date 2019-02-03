@@ -1,0 +1,82 @@
+const DEFAULT_RAW = 'Raw Text \n=======\nMarked in browser\n-----------\nRendered by **marked**.\n\nText attributes *italic*, **bold**, `monospace`, ~~strikethrough~~.\n\nUsing:\n  * ReactJS\n  * JavaScript\n  * Sass\n\nLibraries:\n  1. jQuery\n  2. Bootstrap\n  3. Marked\n\n[GitHub](https://github.com/Ventrosky)';
+
+class App extends React.Component {
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      rawText: DEFAULT_RAW,
+    };
+    this.onRawChange = this.onRawChange.bind(this);
+  };
+  
+  onRawChange(event){
+    this.setState({ rawText: event.target.value});
+  }
+  
+  render() {
+    const { rawText } = this.state;
+    return (
+      <div>
+      <div className="row text-center">
+        <div>
+          <h1>Markdown Previewer </h1>
+          <p>
+            Build a Markdown Previewer - freeCodeCamp Project.
+          </p>
+        </div>
+      </div>
+      <div className="row">
+        <div className="rawText col-md-6">
+          <InputView
+            value={rawText}
+            onChange={this.onRawChange}
+          >
+          </InputView>
+        </div>
+        <div className="markedText col-md-6">
+          <MarkedView 
+          rawText={rawText}
+          >
+          </MarkedView>
+        </div>
+      </div>
+      </div>
+    );
+  }
+}
+
+const InputView = ({value, onChange}) => 
+    <div className="form-group">
+      <textarea 
+        className="form-control rounded-0"
+        id="textarea1" 
+        rows="24"
+        value={value}
+        onChange={onChange}
+        ref={(node) => {this.textarea = node; }}
+      >
+      </textarea>
+    </div>
+
+class MarkedView extends React.Component {
+  constructor(props){
+    super(props);
+    this.parseRaw = this.parseRaw.bind(this);
+  };
+  parseRaw(rawText) {
+      var markedRaw = marked(rawText, {sanitize: true});
+      return { __html: markedRaw };
+  }
+  render(){
+    const {
+      rawText,
+    } = this.props
+    return(
+      <span dangerouslySetInnerHTML={this.parseRaw(rawText)} />
+  );
+  }
+}
+
+const appDiv = document.getElementById('app');
+ReactDOM.render(<App />, appDiv);

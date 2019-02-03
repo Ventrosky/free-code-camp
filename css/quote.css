@@ -1,0 +1,36 @@
+header {  
+  background-color: #F8F8F8; 
+}
+header a{  
+  padding: 1.4rem 0;  
+  color: #777;  
+  font-weight: bold; 
+} 
+header a:hover{
+ color: #d3bc5f;
+ text-decoration: none;
+}
+blockquote {
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    border-left: 0.5em solid #d3bc5f;
+    padding: .75em .5em .75em 1em;
+}
+blockquote footer {
+	background-color: white;
+	color: #b31515;
+}
+.intro-header {
+  min-height: 30rem;
+  display: table;
+  width: 100%;
+  height: auto;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+.wrap-quote{
+    padding-top: 3rem;
+    vertical-align: middle;
+}
+.wrap-quote h1{
+    padding-bottom: 2rem;
+}

@@ -1,0 +1,64 @@
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+fieldset {
+  -webkit-appearance: none;
+  width : 100%;
+  margin: 0;
+  font-family: inherit;
+  font-size: 90%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+input:invalid {
+  box-shadow: 0 0 5px 1px red;
+}
+
+input:focus:invalid {
+  outline: none;
+}
+
+.panel {
+  border: 1px solid #1590D3; 
+  border-radius:10px;
+  transition: box-shadow 0.5s;
+}
+
+.panel-heading {
+  color: #fff !important;
+  background-color: #1590D3 !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid #1590D3;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.btn {
+  margin: 15px 0;
+  background-color: #2b8dd6;
+  color: #fff;
+  float: right;
+}
+
+.form-stuff{
+  padding: 1.5em;
+}
+
+.main-ctn{
+  margin-top: 1em;
+}
+.multi{
+  margin-right:1em;
+  margin-left:1em;
+}
+.clearfix::after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}    

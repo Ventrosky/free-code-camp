@@ -1,0 +1,191 @@
+const PATH_BASE = 'https://fcctop100.herokuapp.com/api/fccusers/top';
+const PARAM_RECENT = '/recent';
+const PARAM_ALLTIME = '/alltime';
+
+
+class App extends React.Component {
+  _isMounted = false;
+  
+  constructor(props){
+    super(props);
+    
+    this.state = {
+      recentList : [],
+      alltimeList: [],
+      error: null,
+      isLoading: false,
+    };
+    
+    this.setSearch = this.setSearch.bind(this);
+    this.fetchSearch = this.fetchSearch.bind(this);
+  };
+  
+  setSearch(result, searchParam){
+    if (searchParam == PARAM_RECENT){
+      this.setState({recentList: result});
+    } else if (searchParam == PARAM_ALLTIME){
+      this.setState({alltimeList: result});
+    }
+    if ((this.state.recentList != []) && (this.state.alltimeList != [])){
+      this.setState({isLoading: false});
+    }
+  }
+  
+  fetchSearch(searchParam){
+    this.setState({ isLoading: true });
+    fetch(`${PATH_BASE}${searchParam}`)
+      .then(response => response.json())
+      .then(result => this._isMounted && this.setSearch(result, searchParam))
+      .catch(error => this._isMounted && this.setState({ error }));
+  }
+  componentDidMount(){
+    this._isMounted = true;
+    this.fetchSearch(PARAM_RECENT); 
+    this.fetchSearch(PARAM_ALLTIME); 
+  }
+
+  componentWillUnmount(){
+    this._isMounted = false;
+  }
+
+  render() {
+    const { recentList, alltimeList, error, isLoading} = this.state;
+    return (
+      <div className="container">
+      <div className="row text-center">
+        <div>
+          <h1>Camper Leaderboard</h1>
+          <p> freeCodeCamp's project - build a camper leaderboard</p>
+        </div>
+      </div>
+      {
+        error 
+        ? <div className="interactions">
+          <p>Something went wrong.</p>
+          </div>
+        : <Table
+            recentList={recentList}
+            alltimeList={alltimeList}
+        />
+        }
+      </div>
+    );
+  }
+}
+
+const midColumn = {
+  width: '30%',
+};
+const smallColumn = {
+  width: '10%',
+};
+
+class Table extends React.Component { 
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      sortKey: 'RECENT',
+    };
+
+    this.onSort = this.onSort.bind(this);
+  }
+
+
+  onSort(sortKey) {
+    this.setState({ sortKey });
+  }
+
+  render() {
+    const{ 
+      recentList,
+      alltimeList,
+    } = this.props;
+    
+    const {
+      sortKey
+    } = this.state;
+
+    let i = 0;
+    
+    return(
+      <div className="table">
+        <div className="table-header">
+          <span style={{ width: '10%'}}>
+            #
+          </span>
+          <span style={{ width: '30%'}}>
+            Camper Name
+          </span>
+          <span style={{ width: '30%'}} className="text-center">
+            <Sort 
+              sortKey={'RECENT'}
+              onSort={this.onSort}
+              activeSortKey={sortKey}
+            >
+              Point past 30 days  
+              <span>&nbsp;</span>
+              { (sortKey === 'RECENT')
+                ? <i className="fa fa-sort-desc"></i>
+                : <i className="">&nbsp;</i> 
+              }
+            </Sort>
+          </span>
+          <span style={{ width: '30%'}} className="text-center">
+            <Sort 
+              sortKey={'ALLTIME'}
+              onSort={this.onSort}
+              activeSortKey={sortKey}
+            >
+              All time points 
+              <span>&nbsp;</span>
+              { (sortKey === 'ALLTIME')
+                ? <i className="fa fa-sort-desc"></i>
+                : <i className="">&nbsp;</i> 
+              }
+            </Sort>
+          </span>
+        </div>
+        {(sortKey === 'RECENT' ? recentList : alltimeList ).map(item => 
+            <div key={i} className="table-row"> 
+              <span style={smallColumn}>
+                {i=i+1}
+              </span>
+              <span style={midColumn}> <img src={item.img} className="profileImg img-fluid" alt="Responsive image"/>{item.username}</span>
+              <span style={midColumn} className="text-center"> {item.recent}</span>
+              <span style={midColumn} className="text-center"> {item.alltime}</span>
+            </div>
+        )}
+      </div>
+    );
+  }
+}
+
+const Button = ({onClick, className, children}) =>
+      <button
+        onClick={onClick}
+        className={className}
+        type="button"
+      >
+        {children}
+      </button>
+
+const Sort = ({ sortKey, activeSortKey, onSort, children }) =>{
+  const sortClass =  ['button-inline'];
+  if (sortKey == activeSortKey){
+    sortClass.push('button-active');
+  }
+
+  return(
+    <Button 
+      onClick={() => onSort(sortKey)}
+      className={sortClass.join(' ')}
+    >
+      {children}
+    </Button>
+  );
+}
+
+
+const appDiv = document.getElementById('app');
+ReactDOM.render(<App />, appDiv);

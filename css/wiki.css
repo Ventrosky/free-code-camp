@@ -1,0 +1,52 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+}
+
+h1{  
+  font-weight: bold;  
+}
+header {  
+  background-color: #F8F8F8; 
+}
+header a{  
+  padding: 1rem 0;  
+  color: black;  
+  font-weight: bold; 
+} 
+header a:hover{
+ color: #be5532;
+ text-decoration: none;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+#title{
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+ul#wiki-list {  
+  margin: 0; 
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
+
+ul#wiki-list .article {  
+  width: 100%;  
+  display: inline-block;
+  border-radius: 0.4rem 0.4rem 0 0;
+  border: 0.1em solid #d3d3d3;  
+  background-color: #F8F8F8; 
+}
+ul#wiki-list .article:hover {
+  background-color: #CEE4F5;
+  cursor: pointer;
+}
+ul#wiki-list .article p{
+  padding-left: 2%;
+  padding-right:2%;
+}
+ul#wiki-list .article h4 {  
+  font-weight: bold;  
+  margin-bottom: 0.5rem; 
+}

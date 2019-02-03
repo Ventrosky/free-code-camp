@@ -1,0 +1,38 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+.settings{
+  font-size: 20px;
+}
+
+h1 {
+  color: #900;
+}
+
+.orbi {
+  font-family: 'Orbitron', sans-serif;
+  width: 40px;
+  display: inline-table;
+  text-align: center;
+}
+.timer-box{
+  font-family: 'Orbitron', sans-serif;
+  font-size: 35px;
+  float: none;
+  margin: 0 auto;
+}
+
+.panel-default{
+  width: 330px;
+  margin: 0 auto;
+}
+
+.panel-body {
+    padding-top: 18px;
+    padding-bottom: 15px;
+    width: 330px;
+}
+
+i:hover{
+ cursor: pointer;
+}
