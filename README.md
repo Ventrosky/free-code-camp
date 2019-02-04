@@ -5,6 +5,7 @@
 > Projects for **freeCodeCamp**'s [*"Front End Development Certification"*](https://www.freecodecamp.org/certification/ventrosky/legacy-front-end) and *"Responsive Web Design Certification"* (undergoing). Using: **HTML5**, **CSS**, **Bootstrap**, **jQuery**, **JavaScript**, **JSON APIs** and **Ajax**. 
 * [Build a Tribute Page](https://codepen.io/BuccaneerDev/full/VXYorJ/)
 * [Build a Survey Form](https://codepen.io/BuccaneerDev/full/YBQPWJ)
+* [Build a Product Landing Page](https://codepen.io/BuccaneerDev/full/aXwGNy)
 * [Build a Personal Portfolio](https://codepen.io/BuccaneerDev/full/YaypqP/)
 * [Build a Random Quote Machine](https://codepen.io/BuccaneerDev/full/OvNRre/)
 * [Show the Local Weather](https://codepen.io/BuccaneerDev/full/eMzQWL/)
@@ -28,3 +29,5 @@
 * [Visualize Data with a Heat Map](https://codepen.io/BuccaneerDev/full/rKZvwa/)
 * [Visualize Data with a Choropleth Map](https://codepen.io/BuccaneerDev/full/bKmoZd/)
 * [Visualize Data with a Treemap Diagram](https://codepen.io/BuccaneerDev/full/jKdGPK/)
+
+15/17
