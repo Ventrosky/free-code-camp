@@ -26,12 +26,12 @@
     <input type="email" class="form-control" id="email" placeholder="Email" pattern="\A[A-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+\Z" required name="email">
   </div>
   <div class="form-group">
-    <label for="age" id="number-label">How old are you?</label>
-    <input  type="number" class="form-control" id="number" placeholder="Age" pattern="\d+"  min="1" max="120" name="age">
+    <label for="number" id="number-label">How old are you?</label>
+    <input  type="number" class="form-control" id="number" placeholder="Age" pattern="\d+"  min="1" max="120" name="number">
   </div>
   <div class="form-group">
-  <label for="house">Select Your Houses:</label>
-   <select class="form-control" id="dropdown" name="house">
+  <label for="dropdown">Select Your Houses:</label>
+   <select class="form-control" id="dropdown" name="dropdown">
       <option> Gryffindor</option>
       <option> Hufflepuff</option>
       <option> Ravenclaw</option>
@@ -40,7 +40,7 @@
   </div>
   <div class="form-group">
     <label for="radio-buttons">Select Your Pet Companion:</label>
-     <ul style="list-style: none;">
+     <ul style="list-style: none;" id="radio-buttons">
        <li><label class="radio"><input type="radio" name="radio-buttons" value="Owl" checked>Owl</label></li>
        <li><label class="radio"><input type="radio" name="radio-buttons" value="Cat">Cat</label></li>
        <li><label class="radio"><input type="radio" name="radio-buttons" value="Toad">Toad</label> </li>
@@ -49,7 +49,7 @@
   </div>
   <div class="form-group ">
     <label for="branches">Select Your Preferred Branches of Magic:</label>
-    <div class="row">
+    <div class="row" id ="branches">
        <div class="checkbox col-4"><label><input type="checkbox" value="Alchemy" name="branches"> Alchemy</label></div>
        <div class="checkbox col-4"><label><input type="checkbox" value="Broomology" name="branches"> Broomology</label></div>
        <div class="checkbox col-4"><label><input type="checkbox" value="Dark Magic" name="branches"> Dark Magic</label></div>
