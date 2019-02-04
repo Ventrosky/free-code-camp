@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>FCC: Product Landing Page</title>
+	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.1/css/all.css'>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+	<header id="header" class="jumbotron text-center">
+		<nav class="navbar navbar-expand-lg navbar-fixed-top" id="nav-bar">
+			<a class="navbar-brand" href="#">
+				<img src="https://raw.githubusercontent.com/Ventrosky/free-code-camp/master/img/logo.png" alt="" width="20px" height="20px">
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		<div class="collapse navbar-collapse" id="navbarNavDropdown">
+			<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#services">Services</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#pricing">Pricing</a>
+			</li>
+			</ul>
+		</div>
+		</nav>
+		<div class="row">
+			<div class="col-12">
+			<img src="https://raw.githubusercontent.com/Ventrosky/free-code-camp/master/img/logo.png" width="60" height="60" class="d-inline-block align-left" alt=""  id="header-img">
+			<div class="content-heading"><h1><strong>Fusion Industries</strong></h1></div>
+				<h2>Creating Our Energy Future</h2>
+			</div>
+		</div>
+		<form class="form-inline justify-content-center padtop padbottom" id="form" action="https://www.freecodecamp.com/email-submit">
+			<div class="input-group">
+				<input type="email" id="email" class="form-control" size="50" placeholder="Email Address" required name="email"  pattern="\A[A-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[A-Z0-9.-]+\Z">
+				<div class="input-group-btn">
+					<input type="submit" class="btn btn-danger" id="submit">
+				</div>
+			</div>
+		</form>
+	</header>
+	<div class="container-fluid" id="about">
+		<div class="row">
+			<div class="col-sm-8">
+				<h2><strong>About Fusion Industries</strong></h2> 
+				<h4>A Team with Experience and a Vision for Nuclear Fusion</h4>
+				<p>Fusion Industries is a leader in utility and community scale cold fusion, with more than 300 projects and 160 gigawatts of nuclear power stations currently deployed across the US. Led by an experienced executive team, Fusion Industries develops, finances, constructs and operates power plants that provide communities with affordable energy, new revenue streams, and jobs.</p>
+			</div>
+			<div class="col-sm-4">
+				<i class="fas fa-signal fa-7x logo toright"></i>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid bg-color">
+		<div class="row">
+			<div class="col-sm-4">
+				<i class="fas fa-globe-europe fa-7x logo"></i>
+			</div>
+			<div class="col-sm-8">
+				<h2><strong>Our Values</strong></h2> 
+				<h4>Partnering With Corporations that are Investing in Sustainability</h4>
+				<p>For every company, no matter its size, energy makes growth possible. More and more, companies are looking to clean energy procurement as a strategic business decision to support their growth and business bottom line.</p>
+				<p>To reach this fast-evolving market’s full potential, Fusion Industries is creating a path for renewable energy purchasers of all sizes. Even those investing in the projects themselves.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid text-center" id="services">
+		<h2><strong>SERVICES</strong></h2> 
+		<h4>What we offer</h4>
+		<br>
+		<div class="row">
+			<div class="col-sm-4">
+				<span class="fas fa-power-off logo-small"></span>
+				<h4>POWER</h4>
+				<p>Fusion Industries designs, manufacture, install, and service more power plants across the globe than anyone else.</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="fas fa-heart logo-small"></span>
+				<h4>LOVE</h4>
+				<p>Nuclear plants do more than support local carowners. The projects spin off millions of dollars for schools, and local infrastructure.</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="fas fa-lock logo-small"></span>
+				<h4>STRENGTH</h4>
+				<p>Funded and backed by experienced and committed investors in the renewable energy sector, we will be your trusted long-term partner.</p>
+			</div>
+		</div>
+		<br><br>
+		<div class="row">
+			<div class="col-sm-4">
+				<span class="fas fa-leaf logo-small"></span>
+				<h4>GREEN</h4>
+				<p>Clean energy is the new foundation for our energy future, and states embracing it are winning when major corporations move and expand.</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="fas fa-university logo-small"></span>
+				<h4>INVESTMENT</h4>
+				<p>Nuclear energy brings hundreds of millions of dollars of infrastructure investment to rural communities across the United States.</p>
+			</div>
+			<div class="col-sm-4">
+				<span class="fas fa-wrench logo-small"></span>
+				<h4>JOBS</h4>
+				<p>Nuclear plant technician the fastest-growing job in America, it’s one of the best high-skill, high-wage job with a great view every day.</p>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid bg-color" id="pricing">
+	<div class="text-center">
+		<h2><strong>Pricing</strong></h2>
+		<h4>Choose a payment plan that works for you</h4>
+	</div>
+	<div class="row">
+		<div class="col-sm-4">
+		<div class="panel panel-default text-center bg-color2">
+			<div class="panel-heading">
+			<h1>Basic</h1>
+			</div>
+			<div class="panel-body padtop">
+			<p><strong>1</strong> Mr. Fusion</p>
+			<p><strong>1.21</strong> Gigawatts</p>
+			<p><strong>Free</strong> Support</p>
+			<p><strong>Delivery</strong> Domestic</p>
+			<p><strong>Endless</strong> Fuel</p>
+			</div>
+			<div class="panel-footer">
+			<h3>$190</h3>
+			<h4>per month</h4>
+			<button class="btn btn-lg">Sign Up</button>
+			</div>
+		</div>
+		</div>
+		<div class="col-sm-4">
+		<div class="panel panel-default text-center bg-color2">
+			<div class="panel-heading">
+			<h1>Pro</h1>
+			</div>
+			<div class="panel-body  padtop">
+			<p><strong>3</strong> Mr. Fusion</p>
+			<p><strong>3.63</strong> Gigawatts</p>
+			<p><strong>Free</strong> Support</p>
+			<p><strong>Delivery</strong> International</p>
+			<p><strong>Endless</strong> Fuel</p>
+			</div>
+			<div class="panel-footer">
+			<h3>$490</h3>
+			<h4>per month</h4>
+			<button class="btn btn-lg">Sign Up</button>
+			</div>
+		</div>
+		</div>
+	<div class="col-sm-4" >
+		<div class="panel panel-default text-center bg-color2">
+			<div class="panel-heading">
+			<h1>Premium</h1>
+			</div>
+			<div class="panel-body padtop">
+			<p><strong>5</strong> Mr. Fusion</p>
+			<p><strong>6.05</strong> Gigawatts</p>
+			<p><strong>Free</strong> Support</p>
+			<p><strong>Delivery</strong> International</p>
+			<p><strong>Endless</strong> Fuel</p>
+			</div>
+			<div class="panel-footer">
+			<h3>$890</h3>
+			<h4>per month</h4>
+			<button class="btn btn-lg">Sign Up</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	</div>
+	<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-12 text-center">
+	<h2><strong>Video Testimonial</strong></h2> 
+	<br/> 
+		<div class="embed-responsive embed-responsive-16by9">
+		<iframe id="video" class="embed-responsive-item" src="//www.youtube.com/embed/ptlhgFaB89Y" allowfullscreen></iframe>
+		</div>
+		</div>
+	</div>
+	</div>
+	<footer class="container-fluid btn-color3 text-center">
+	<p>By Fusion Industries</p> 
+	</footer>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js'></script>
+	<script  src="js/index.js"></script>
+</body>
+</html>

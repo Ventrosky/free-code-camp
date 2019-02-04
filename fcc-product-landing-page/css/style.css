@@ -1,0 +1,162 @@
+.jumbotron {
+  background-color: #7a9700; 
+  color: #ffffff;
+  padding: 100px 25px;
+}
+
+.container-fluid {
+  padding: 60px 50px;
+}
+
+.bg-color {
+  background-color: #d5ce6d;
+}
+.bg-color2 {
+  background-color: #ffff;
+}
+
+.logo {
+  font-size: 200px;
+  color: #7a9700;
+}
+
+.logo-small {
+  color: #7a9700;
+  font-size: 50px;
+}
+
+.btn-color{
+  background-color: #7a9700;
+  margin: 15px 45px;
+  color: #fff;
+  float: right;
+}
+.btn-color3{
+  background-color: #7a9700;
+  color: #fff;
+}
+.btn-color3:hover , .btn-color:hover {
+  border: 1px solid #519021;
+  background-color: #519021 !important;
+}
+.panel {
+  border: 1px solid #7a9700;
+  border-radius:0;
+  transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+  box-shadow: 5px 0px 40px rgba(0,0,0, .4);
+}
+
+.panel-footer .btn:hover {
+  border: 1px solid #519021;
+  background-color: #519021 !important;
+}
+
+.panel-heading {
+  color: #fff !important;
+  background-color: #7a9700 !important;
+  padding: 25px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+  background-color: #fff !important;
+}
+
+.panel-footer h3 {
+  font-size: 32px;
+}
+
+.panel-footer h4 {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.panel-footer .btn {
+  margin: 15px 0;
+  background-color: #7a9700;
+  color: #fff;
+}
+
+input:focus, textarea:focus, select:focus {
+outline-offset: 0px !important;
+outline: none !important;
+border: 1px solid green !important;
+box-shadow: 0 0 3px green !important;
+-moz-box-shadow: 0 0 3px green !important;
+-webkit-box-shadow: 0 0 3px green !important;
+}
+
+input:required:valid { 
+  border: 2px solid  	#90EE90; 
+}
+.padtop{
+  padding-top:15px;
+}
+.padbottom{
+  padding-bottom: 50px;
+}
+.toright{
+  float: right;
+}
+
+.header{
+    background:#000;
+    height:250px;
+    position:fixed;
+    width: 100%;
+    top: 0;
+} 
+
+header::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+#nav-bar {
+  background-color: #7a9700;
+  z-index:999;
+  width: 100%;
+  float: left;
+  left: 0px;
+  top: 0px;
+  position: fixed;
+  width: 100%;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.navbar-brand{
+  margin-left:20px;
+}
+
+#nav-bar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav li {
+  flex: auto ;
+}
+
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+
