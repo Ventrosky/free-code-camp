@@ -6,6 +6,7 @@
 * [Build a Tribute Page](https://codepen.io/BuccaneerDev/full/VXYorJ/)
 * [Build a Survey Form](https://codepen.io/BuccaneerDev/full/YBQPWJ)
 * [Build a Product Landing Page](https://codepen.io/BuccaneerDev/full/aXwGNy)
+* [Build a Technical Documentation Page](https://codepen.io/BuccaneerDev/full/jdamYr)
 * [Build a Personal Portfolio](https://codepen.io/BuccaneerDev/full/YaypqP/)
 * [Build a Random Quote Machine](https://codepen.io/BuccaneerDev/full/OvNRre/)
 * [Show the Local Weather](https://codepen.io/BuccaneerDev/full/eMzQWL/)
