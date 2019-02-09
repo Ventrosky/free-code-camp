@@ -2,7 +2,7 @@
 > fCC Profile: https://www.freecodecamp.org/ventrosky
 
 ## Front End Development & Responsive Web Design:
-> Projects for **freeCodeCamp**'s [*"Front End Development Certification"*](https://www.freecodecamp.org/certification/ventrosky/legacy-front-end) and *"Responsive Web Design Certification"* (undergoing). Using: **HTML5**, **CSS**, **Bootstrap**, **jQuery**, **JavaScript**, **JSON APIs** and **Ajax**. 
+> Projects for **freeCodeCamp**'s [*"Front End Development Certification"*](https://www.freecodecamp.org/certification/ventrosky/legacy-front-end) and [*"Responsive Web Design Certification"*](https://www.freecodecamp.org/certification/ventrosky/responsive-web-design). Using: **HTML5**, **CSS**, **Bootstrap**, **jQuery**, **JavaScript**, **JSON APIs** and **Ajax**. 
 * [Build a Tribute Page](https://codepen.io/BuccaneerDev/full/VXYorJ/)
 * [Build a Survey Form](https://codepen.io/BuccaneerDev/full/YBQPWJ)
 * [Build a Product Landing Page](https://codepen.io/BuccaneerDev/full/aXwGNy)
