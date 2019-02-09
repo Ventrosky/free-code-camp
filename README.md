@@ -30,5 +30,3 @@
 * [Visualize Data with a Heat Map](https://codepen.io/BuccaneerDev/full/rKZvwa/)
 * [Visualize Data with a Choropleth Map](https://codepen.io/BuccaneerDev/full/bKmoZd/)
 * [Visualize Data with a Treemap Diagram](https://codepen.io/BuccaneerDev/full/jKdGPK/)
-
-15/17
