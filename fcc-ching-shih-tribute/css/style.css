@@ -1,0 +1,15 @@
+body {
+  background-color: #f4f3e8; 
+  font-family: Merriweather,Times New Roman,serif; 
+  color: #555; 
+  font-weight: 400;
+}
+.container{
+  margin-top:1em;
+}
+.carousel-inner img {
+  margin: auto;
+}
+#img-caption{
+  display:none;
+}
