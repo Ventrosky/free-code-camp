@@ -18,7 +18,7 @@
 * [Build a Simon Game](https://codepen.io/BuccaneerDev/full/MVMbVz/)
 
 ## JavaScript Algorithms and Data Structures:
-> JavaScript Projects, for the freeCodeCamp's [*"JavaScript Algorithms and Data Structures" Certification*](https://www.freecodecamp.org/certification/ventrosky/javascript-algorithms-and-data-structures). Using: **JavaScript ES6**.
+> Projects for the freeCodeCamp's [*"JavaScript Algorithms and Data Structures" Certification*](https://www.freecodecamp.org/certification/ventrosky/javascript-algorithms-and-data-structures). Using: **JavaScript ES6**.
 * [Palindrome Checker](https://github.com/Ventrosky/free-code-camp/blob/master/algorithms/projects.js)
 * [Roman Numeral Converter](https://github.com/Ventrosky/free-code-camp/blob/master/algorithms/projects.js)
 * [Caesars Cipher](https://github.com/Ventrosky/free-code-camp/blob/master/algorithms/projects.js)
