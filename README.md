@@ -27,6 +27,7 @@
 
 ## Front End Libraries:
 > ReactJS Projects, for the freeCodeCamp's *"Front End Libraries Certification"* (undergoing). Using: **ReactJS** and **Sass**.
+* [Build a Random Quote Machine](https://codepen.io/BuccaneerDev/full/PLKqRa)
 * [Build a Markdown Previewer](https://codepen.io/BuccaneerDev/full/gzgjPM/)
 * [Build a Camper Leaderboard](https://codepen.io/BuccaneerDev/full/wjyWmX/)
 * [Build a Recipe Box](https://codepen.io/BuccaneerDev/full/mLGymP/)
