@@ -1,0 +1,38 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  background-color: #fff;
+  color: #444;
+}
+
+#main {
+  padding-top: 20px;
+}
+
+.drum-pad {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1.7em;
+  text-align: center;
+  border: 1px solid #CCC;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+}
+
+.highlated {
+  color: #221d1d;
+  background-color: #616060;
+  box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.9);
+}
+
+#display {
+  width: 220px;
+  height: 64px;
+  background-color: #444;
+  padding: 20px;
+  color: #fff;
+  border-style: inset;
+  border-color: darkgray;
+}

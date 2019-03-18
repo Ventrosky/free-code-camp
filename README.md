@@ -31,6 +31,7 @@
 * [Build a Markdown Previewer](https://codepen.io/BuccaneerDev/full/gzgjPM/)
 * [Build a Camper Leaderboard](https://codepen.io/BuccaneerDev/full/wjyWmX/)
 * [Build a Recipe Box](https://codepen.io/BuccaneerDev/full/mLGymP/)
+* [Build a Drum Machine](https://codepen.io/BuccaneerDev/full/NJaNMB)
 
 ## Data Visualization:
 > D3JS Projects, for the freeCodeCamp's [*"Data Visualization" Certification*](https://www.freecodecamp.org/certification/ventrosky/data-visualization). Using: **D3JS**, **Bootstrap** and **CSS**. 
