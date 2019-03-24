@@ -26,13 +26,14 @@
 * [Cash Register](https://github.com/Ventrosky/free-code-camp/blob/master/algorithms/projects.js)
 
 ## Front End Libraries:
-> ReactJS Projects, for the freeCodeCamp's *"Front End Libraries Certification"* (undergoing). Using: **ReactJS** and **Sass**.
+> ReactJS Projects, for the freeCodeCamp's [*"Front End Libraries Certification"*](https://www.freecodecamp.org/certification/ventrosky/front-end-libraries). Using: **ReactJS** and **Sass**.
 * [Build a Random Quote Machine](https://codepen.io/BuccaneerDev/full/PLKqRa)
 * [Build a Markdown Previewer](https://codepen.io/BuccaneerDev/full/gzgjPM/)
 * [Build a Camper Leaderboard](https://codepen.io/BuccaneerDev/full/wjyWmX/)
 * [Build a Recipe Box](https://codepen.io/BuccaneerDev/full/mLGymP/)
 * [Build a Drum Machine](https://codepen.io/BuccaneerDev/full/NJaNMB)
 * [Build a JavaScript Calculator](https://codepen.io/BuccaneerDev/full/YgjWRo)
+* [Build a Pomodoro Clock](https://codepen.io/BuccaneerDev/full/gEdWYR)
 
 ## Data Visualization:
 > D3JS Projects, for the freeCodeCamp's [*"Data Visualization" Certification*](https://www.freecodecamp.org/certification/ventrosky/data-visualization). Using: **D3JS**, **Bootstrap** and **CSS**. 
