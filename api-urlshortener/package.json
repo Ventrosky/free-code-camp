@@ -1,0 +1,21 @@
+{
+  "name": "oracle",
+  "version": "1.0.0",
+  "description": "demo oracle api",
+  "main": "server.js",
+   "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "env-cmd": "^9.0.2",
+    "express": "^4.16.4",
+    "mongodb": "^3.3.0-beta2",
+    "morgan": "^1.9.1",
+    "short-uuid": "^3.1.1",
+    "utf8": "^3.0.0",
+    "utf8-bytes": "0.0.1"
+  }
+}
