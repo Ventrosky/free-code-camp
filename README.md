@@ -2,7 +2,7 @@
 > Projects for the **freeCodeCamp** Certifications fCC Profile: https://www.freecodecamp.org/ventrosky
 
 ## Apis and Microservices Projects:
-> Apis and Microservices Projects, for the *"Apis And Microservices" Certification* (undergoing). Using: **Node** and **Express**. 
+> Apis and Microservices Projects, for the [*"Apis And Microservices" Certification*](https://www.freecodecamp.org/certification/ventrosky/apis-and-microservices). Using: **Node.js**, **Express** and **MongoDB**. 
 * [Timestamp Microservice](https://fifth-scent.glitch.me/)
 * [Request Header Parser Microservice](https://fuzzy-temperature.glitch.me/)
 * [URL Shortener Microservice](https://kaput-barracuda-1.glitch.me)
